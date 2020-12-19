@@ -1,0 +1,45 @@
+<%- include('includes/header.ejs') %>
+<div>
+  <%- include('includes/navigation.ejs') %>
+  <div class="container">
+    <h1><%- title %></h1>
+    <div>
+      <form method="POST" action="/create">
+        <div>
+          <label for="title" class="form-label">Title</label>
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="Title"
+          />
+        </div>
+        <div>
+          <label for="imageUrl" class="form-label">Image Url</label>
+          <input
+            name="imageUrl"
+            type="text"
+            class="form-control"
+            id="imageUrl"
+            placeholder="ImageUrl"
+          />
+        </div>
+        <div class="form-floating mt-5">
+          <textarea
+            name="content"
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+            style="height: 100px"
+          ></textarea>
+          <label for="floatingTextarea2">Content</label>
+        </div>
+        <div class="mt-5">
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('includes/footer.ejs') %>
